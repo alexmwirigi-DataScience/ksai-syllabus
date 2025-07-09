@@ -1,44 +1,44 @@
 # mkdocs.yml - Main Configuration
 
 site_name: Kenya School of Artificial Intelligence
-site_url: https://github.com/alexmwirigi-DataScience/ksai-syllabus.git # Replace later
+site_url: https://github.com/alexmwirigi-DataScience/ksai-syllabus.git
 site_author: Alex Mwirigi
 repo_name: ksai-syllabus  
 edit_uri: edit/main/docs/
 
-# --- Theme Configuration ---
 theme:
   name: material
-  font:
-    text: Roboto
-    code: Roboto Mono
   palette:
-    # Palette toggle for light mode
     - scheme: default
-      primary: 'blue grey'
-      accent: 'indigo'
-      toggle:
-        icon: material/brightness-7
-        name: Switch to dark mode
-
-    # Palette toggle for dark mode
-    - scheme: slate
-      primary: 'blue grey'
-      accent: 'indigo'
+      primary: blue
+      accent: indigo
       toggle:
         icon: material/brightness-4
+        name: Switch to dark mode
+    - scheme: slate
+      primary: blue
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
         name: Switch to light mode
-  logo: 'assets/ksai-logo (2).png'  # You will need to create this image file
-  favicon: 'assets/favicon.ico' # And this one
+  logo: 'assets/ksai-logo (2).png'
+  favicon: 'assets/favicon.ico'
   features:
-    - navigation.tabs
-    - navigation.sections
-    - navigation.top
-    - search.suggest
-    - search.highlight
-    - content.code.annotate
-    - content.tabs.link
-    - navigation.footer 
+  - navigation.tabs
+  - navigation.sections
+  - navigation.top
+  - navigation.footer
+  - navigation.expand
+  - navigation.indexes
+  - navigation.instant
+  - navigation.tracking
+  - toc.integrate
+  - search.suggest
+  - search.highlight
+  - content.code.annotate
+  - content.tabs.link
+  - content.action.edit
+  - content.action.view
 
 # --- Extensions ---
 markdown_extensions:
@@ -57,12 +57,12 @@ markdown_extensions:
   - pymdownx.snippets
   - pymdownx.tabbed:
       alternate_style: true
-  - attr_list  # Enables curly-brace attribute syntax for Material buttons
+  - attr_list
 
 # --- Navigation Structure ---
 nav:
   - 'Home': 'index.md'
-  - "Module 0: Foundations of Applied AI Engineering":
+  - 'Module 0: Foundations of Applied AI Engineering':
       - 'Lesson 0.1: The Engineering Workshop': 'module0/lesson0.1_workshop.md'
       - 'Lesson 0.2: Designing Technical Architecture': 'module0/lesson0.2_blueprint.md'
       - 'Lesson 0.3: Version Control & Packaging Concepts': 'module0/lesson0.3_container.md'
@@ -112,3 +112,5 @@ nav:
       - 'Lesson 10.3: Building Technical Communities & Audience': 'module10/lesson10.3_community.md'
       - 'Lesson 10.4: Capstone Presentation & Defense': 'module10/lesson10.4_defense.md'
   - 'KSAI WhatsApp Community': 'https://chat.whatsapp.com/Hth07uBSP93BukTt0abmMO'
+
+ 
