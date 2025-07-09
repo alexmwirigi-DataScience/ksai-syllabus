@@ -1,0 +1,114 @@
+# mkdocs.yml - Main Configuration
+
+site_name: Kenya School of Artificial Intelligence
+site_url: https://github.com/alexmwirigi-DataScience/ksai-syllabus.git # Replace later
+site_author: Alex Mwirigi
+repo_name: ksai-syllabus  
+edit_uri: edit/main/docs/
+
+# --- Theme Configuration ---
+theme:
+  name: material
+  font:
+    text: Roboto
+    code: Roboto Mono
+  palette:
+    # Palette toggle for light mode
+    - scheme: default
+      primary: 'blue grey'
+      accent: 'indigo'
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - scheme: slate
+      primary: 'blue grey'
+      accent: 'indigo'
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  logo: 'assets/ksai-logo (2).png'  # You will need to create this image file
+  favicon: 'assets/favicon.ico' # And this one
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.code.annotate
+    - content.tabs.link
+    - navigation.footer 
+
+# --- Extensions ---
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.tabbed:
+      alternate_style: true
+  - attr_list  # Enables curly-brace attribute syntax for Material buttons
+
+# --- Navigation Structure ---
+nav:
+  - 'Home': 'index.md'
+  - "Module 0: Foundations of Applied AI Engineering":
+      - 'Lesson 0.1: The Engineering Workshop': 'module0/lesson0.1_workshop.md'
+      - 'Lesson 0.2: Designing Technical Architecture': 'module0/lesson0.2_blueprint.md'
+      - 'Lesson 0.3: Version Control & Packaging Concepts': 'module0/lesson0.3_container.md'
+      - 'Lesson 0.4: Command Line & Developer Tooling': 'module0/lesson0.4_cockpit.md'
+  - 'Module 1: Programming & Data Foundations':
+      - 'Lesson 1.1: Python Programming for AI': 'module1/lesson1.1_python.md'
+      - 'Lesson 1.2: Data Manipulation with Pandas': 'module1/lesson1.2_pandas.md'
+      - 'Lesson 1.3: Working with APIs and Web Data': 'module1/lesson1.3_apis.md'
+      - 'Lesson 1.4: Databases and SQL for Developers': 'module1/lesson1.4_sql.md'
+  - 'Module 2: Data Science & Machine Learning Foundations':
+      - 'Lesson 2.1: Exploratory Data Analysis': 'module2/lesson2.1_eda.md'
+      - 'Lesson 2.2: Building a First Machine Learning Model': 'module2/lesson2.2_first_model.md'
+      - 'Lesson 2.3: Model Evaluation & Performance Metrics': 'module2/lesson2.3_metrics.md'
+      - 'Lesson 2.4: Model Selection and Validation': 'module2/lesson2.4_model_selection.md'
+  - 'Module 3: API Development & Deployment Fundamentals':
+      - 'Lesson 3.1: Understanding HTTP and Web Communication': 'module3/lesson3.1_http.md'
+      - 'Lesson 3.2: Building APIs with FastAPI': 'module3/lesson3.2_fastapi.md'
+      - 'Lesson 3.3: Deploying ML Models as APIs': 'module3/lesson3.3_serving.md'
+      - 'Lesson 3.4: Introduction to Docker for ML Deployment': 'module3/lesson3.4_dockerfile.md'
+  - 'Module 4: Advanced Machine Learning Engineering':
+      - 'Lesson 4.1: Introduction to Deep Learning': 'module4/lesson4.1_deep_learning.md'
+      - 'Lesson 4.2: Continuous Integration in ML Projects': 'module4/lesson4.2_ci.md'
+      - 'Lesson 4.3: Continuous Deployment & Automation': 'module4/lesson4.3_cd.md'
+  - 'Module 5: Cloud Infrastructure for AI Systems':
+      - 'Lesson 5.1: Cloud Storage with AWS S3': 'module5/lesson5.1_aws_s3.md'
+      - 'Lesson 5.2: Compute Infrastructure with EC2': 'module5/lesson5.2_ec2.md'
+      - 'Lesson 5.3: Infrastructure as Code with Terraform': 'module5/lesson5.3_terraform.md'
+  - 'Module 6: Monitoring & Reliability in AI Systems':
+      - 'Lesson 6.1: Monitoring AI Systems': 'module6/lesson6.1_monitoring.md'
+      - 'Lesson 6.2: Detecting and Handling Data/Model Drift': 'module6/lesson6.2_drift.md'
+      - 'Lesson 6.3: Logging and Observability': 'module6/lesson6.3_logging.md'
+  - 'Module 7: Building User-Facing AI Applications':
+      - 'Lesson 7.1: Rapid Prototyping with Streamlit': 'module7/lesson7.1_streamlit.md'
+      - 'Lesson 7.2: Connecting Streamlit to APIs': 'module7/lesson7.2_streamlit_api.md'
+      - 'Lesson 7.3: Designing User Experiences for AI Apps': 'module7/lesson7.3_ux.md'
+  - 'Module 8: Building ML Platforms at Scale':
+      - 'Lesson 8.1: Model Pipelines and Continuous Training': 'module8/lesson8.1_ct.md'
+      - 'Lesson 8.2: Scalable Infrastructure with Kubernetes': 'module8/lesson8.2_kubernetes.md'
+      - 'Lesson 8.3: Feature Stores with Feast': 'module8/lesson8.3_feast.md'
+  - 'Module 9: Specialization Tracks':
+      - 'Lesson 9.1: Career Paths in AI Engineering': 'module9/lesson9.1_specialization.md'
+      - 'Lesson 9.2: Natural Language Processing Foundations': 'module9/lesson9.2_nlp.md'
+      - 'Lesson 9.3: Computer Vision Foundations': 'module9/lesson9.3_cv.md'
+  - 'Module 10: AI Business, Communication, and Leadership':
+      - 'Lesson 10.1: Pitching AI Solutions to Stakeholders': 'module10/lesson10.1_pitch.md'
+      - 'Lesson 10.2: Understanding the Economics of AI': 'module10/lesson10.2_economics.md'
+      - 'Lesson 10.3: Building Technical Communities & Audience': 'module10/lesson10.3_community.md'
+      - 'Lesson 10.4: Capstone Presentation & Defense': 'module10/lesson10.4_defense.md'
+  - 'KSAI WhatsApp Community': 'https://chat.whatsapp.com/Hth07uBSP93BukTt0abmMO'
