@@ -84,7 +84,7 @@
       Begin with <strong>Module 0: Foundations of Applied AI Engineering</strong>  
       This is your environment, mindset, and method — the foundations of all great engineering.
     </p>
-    <a href="module0/lesson0.1_workshop.md" style="background: var(--md-accent-fg-color); color: black; padding: 1rem 2rem; border-radius: 8px; font-weight: bold; text-decoration: none;">
+    <a href="module0/lesson0.1_workshop/" style="background: var(--md-accent-fg-color); color: black; padding: 1rem 2rem; border-radius: 8px; font-weight: bold; text-decoration: none;">
       Start Building →
     </a>
   </div>
