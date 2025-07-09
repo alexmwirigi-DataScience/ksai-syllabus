@@ -1,0 +1,2507 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="Alex Mwirigi">
+      
+      
+        <link rel="canonical" href="https://github.com/alexmwirigi-DataScience/ksai-syllabus.git/module0/lesson0.1_workshop/">
+      
+      
+        <link rel="prev" href="../..">
+      
+      
+        <link rel="next" href="../lesson0.2_blueprint/">
+      
+      
+      <link rel="icon" href="../../assets/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.15">
+    
+    
+      
+        <title>Lesson 0.1: The Engineering Workshop - Kenya School of Artificial Intelligence</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.342714a4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue-grey" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#module-0-foundations-of-applied-ai-engineering" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Kenya School of Artificial Intelligence" class="md-header__button md-logo" aria-label="Kenya School of Artificial Intelligence" data-md-component="logo">
+      
+  <img src="../../assets/ksai-logo (2).png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Kenya School of Artificial Intelligence
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Lesson 0.1: The Engineering Workshop
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue-grey" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="blue-grey" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+  
+  Module 0: Foundations of Applied AI Engineering
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../module1/lesson1.1_python/" class="md-tabs__link">
+          
+  
+  
+  Module 1: Programming & Data Foundations
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../module2/lesson2.1_eda/" class="md-tabs__link">
+          
+  
+  
+  Module 2: Data Science & Machine Learning Foundations
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../module3/lesson3.1_http/" class="md-tabs__link">
+          
+  
+  
+  Module 3: API Development & Deployment Fundamentals
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../module4/lesson4.1_deep_learning/" class="md-tabs__link">
+          
+  
+  
+  Module 4: Advanced Machine Learning Engineering
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../module5/lesson5.1_aws_s3/" class="md-tabs__link">
+          
+  
+  
+  Module 5: Cloud Infrastructure for AI Systems
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../module6/lesson6.1_monitoring/" class="md-tabs__link">
+          
+  
+  
+  Module 6: Monitoring & Reliability in AI Systems
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../module7/lesson7.1_streamlit/" class="md-tabs__link">
+          
+  
+  
+  Module 7: Building User-Facing AI Applications
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../module8/lesson8.1_ct/" class="md-tabs__link">
+          
+  
+  
+  Module 8: Building ML Platforms at Scale
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../module9/lesson9.1_specialization/" class="md-tabs__link">
+          
+  
+  
+  Module 9: Specialization Tracks
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../module10/lesson10.1_pitch/" class="md-tabs__link">
+          
+  
+  
+  Module 10: AI Business, Communication, and Leadership
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="https://chat.whatsapp.com/Hth07uBSP93BukTt0abmMO" class="md-tabs__link">
+        
+  
+  
+    
+  
+  KSAI WhatsApp Community
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Kenya School of Artificial Intelligence" class="md-nav__button md-logo" aria-label="Kenya School of Artificial Intelligence" data-md-component="logo">
+      
+  <img src="../../assets/ksai-logo (2).png" alt="logo">
+
+    </a>
+    Kenya School of Artificial Intelligence
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Module 0: Foundations of Applied AI Engineering
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Module 0: Foundations of Applied AI Engineering
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Lesson 0.1: The Engineering Workshop
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Lesson 0.1: The Engineering Workshop
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#lesson-01-the-engineering-workshop" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lesson 0.1: The Engineering Workshop
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Lesson 0.1: The Engineering Workshop">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#welcome-to-the-team" class="md-nav__link">
+    <span class="md-ellipsis">
+      Welcome to the team.
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#concept-1-where-am-i-pwd" class="md-nav__link">
+    <span class="md-ellipsis">
+      Concept 1: Where am I? (pwd)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#concept-2-what-is-around-me-ls" class="md-nav__link">
+    <span class="md-ellipsis">
+      Concept 2: What is around me? (ls)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#concept-3-how-do-i-move-cd" class="md-nav__link">
+    <span class="md-ellipsis">
+      Concept 3: How do I move? (cd)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-full-toolkit-creating-and-manipulating" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Full Toolkit: Creating and Manipulating
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hands-on-exercise-the-scavenger-hunt" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hands-On Exercise: The Scavenger Hunt
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lesson0.2_blueprint/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Lesson 0.2: Designing Technical Architecture
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lesson0.3_container/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Lesson 0.3: Version Control & Packaging Concepts
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lesson0.4_cockpit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Lesson 0.4: Command Line & Developer Tooling
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Module 1: Programming & Data Foundations
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Module 1: Programming & Data Foundations
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module1/lesson1.1_python/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Lesson 1.1: Python Programming for AI
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module1/lesson1.2_pandas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Lesson 1.2: Data Manipulation with Pandas
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module1/lesson1.3_apis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Lesson 1.3: Working with APIs and Web Data
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module1/lesson1.4_sql/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Lesson 1.4: Databases and SQL for Developers
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Module 2: Data Science & Machine Learning Foundations
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Module 2: Data Science & Machine Learning Foundations
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module2/lesson2.1_eda/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Lesson 2.1: Exploratory Data Analysis
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module2/lesson2.2_first_model/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Lesson 2.2: Building a First Machine Learning Model
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module2/lesson2.3_metrics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Lesson 2.3: Model Evaluation & Performance Metrics
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module2/lesson2.4_model_selection/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Lesson 2.4: Model Selection and Validation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Module 3: API Development & Deployment Fundamentals
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Module 3: API Development & Deployment Fundamentals
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module3/lesson3.1_http/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Lesson 3.1: Understanding HTTP and Web Communication
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module3/lesson3.2_fastapi/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Lesson 3.2: Building APIs with FastAPI
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module3/lesson3.3_serving/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Lesson 3.3: Deploying ML Models as APIs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module3/lesson3.4_dockerfile/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Lesson 3.4: Introduction to Docker for ML Deployment
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Module 4: Advanced Machine Learning Engineering
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Module 4: Advanced Machine Learning Engineering
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module4/lesson4.1_deep_learning/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Lesson 4.1: Introduction to Deep Learning
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module4/lesson4.2_ci/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Lesson 4.2: Continuous Integration in ML Projects
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module4/lesson4.3_cd/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Lesson 4.3: Continuous Deployment & Automation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Module 5: Cloud Infrastructure for AI Systems
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Module 5: Cloud Infrastructure for AI Systems
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module5/lesson5.1_aws_s3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Lesson 5.1: Cloud Storage with AWS S3
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module5/lesson5.2_ec2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Lesson 5.2: Compute Infrastructure with EC2
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module5/lesson5.3_terraform/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Lesson 5.3: Infrastructure as Code with Terraform
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Module 6: Monitoring & Reliability in AI Systems
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Module 6: Monitoring & Reliability in AI Systems
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module6/lesson6.1_monitoring/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Lesson 6.1: Monitoring AI Systems
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module6/lesson6.2_drift/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Lesson 6.2: Detecting and Handling Data/Model Drift
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module6/lesson6.3_logging/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Lesson 6.3: Logging and Observability
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Module 7: Building User-Facing AI Applications
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            Module 7: Building User-Facing AI Applications
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module7/lesson7.1_streamlit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Lesson 7.1: Rapid Prototyping with Streamlit
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module7/lesson7.2_streamlit_api/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Lesson 7.2: Connecting Streamlit to APIs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module7/lesson7.3_ux/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Lesson 7.3: Designing User Experiences for AI Apps
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Module 8: Building ML Platforms at Scale
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            Module 8: Building ML Platforms at Scale
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module8/lesson8.1_ct/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Lesson 8.1: Model Pipelines and Continuous Training
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module8/lesson8.2_kubernetes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Lesson 8.2: Scalable Infrastructure with Kubernetes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module8/lesson8.3_feast/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Lesson 8.3: Feature Stores with Feast
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Module 9: Specialization Tracks
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11">
+            <span class="md-nav__icon md-icon"></span>
+            Module 9: Specialization Tracks
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module9/lesson9.1_specialization/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Lesson 9.1: Career Paths in AI Engineering
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module9/lesson9.2_nlp/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Lesson 9.2: Natural Language Processing Foundations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module9/lesson9.3_cv/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Lesson 9.3: Computer Vision Foundations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12" >
+        
+          
+          <label class="md-nav__link" for="__nav_12" id="__nav_12_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Module 10: AI Business, Communication, and Leadership
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_12">
+            <span class="md-nav__icon md-icon"></span>
+            Module 10: AI Business, Communication, and Leadership
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module10/lesson10.1_pitch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Lesson 10.1: Pitching AI Solutions to Stakeholders
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module10/lesson10.2_economics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Lesson 10.2: Understanding the Economics of AI
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module10/lesson10.3_community/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Lesson 10.3: Building Technical Communities & Audience
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module10/lesson10.4_defense/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Lesson 10.4: Capstone Presentation & Defense
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://chat.whatsapp.com/Hth07uBSP93BukTt0abmMO" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    KSAI WhatsApp Community
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#lesson-01-the-engineering-workshop" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lesson 0.1: The Engineering Workshop
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Lesson 0.1: The Engineering Workshop">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#welcome-to-the-team" class="md-nav__link">
+    <span class="md-ellipsis">
+      Welcome to the team.
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#concept-1-where-am-i-pwd" class="md-nav__link">
+    <span class="md-ellipsis">
+      Concept 1: Where am I? (pwd)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#concept-2-what-is-around-me-ls" class="md-nav__link">
+    <span class="md-ellipsis">
+      Concept 2: What is around me? (ls)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#concept-3-how-do-i-move-cd" class="md-nav__link">
+    <span class="md-ellipsis">
+      Concept 3: How do I move? (cd)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-full-toolkit-creating-and-manipulating" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Full Toolkit: Creating and Manipulating
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hands-on-exercise-the-scavenger-hunt" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hands-On Exercise: The Scavenger Hunt
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="module-0-foundations-of-applied-ai-engineering">Module 0: Foundations of Applied AI Engineering</h1>
+<h2 id="lesson-01-the-engineering-workshop">Lesson 0.1: The Engineering Workshop</h2>
+<h3 id="welcome-to-the-team">Welcome to the team.</h3>
+<p>Before we write a single line of artificial intelligence code, before we build a model or analyze data, we must first enter our workshop.</p>
+<p>A master carpenter cannot build a sturdy table without first mastering her workshop. She needs to know where every tool is, how to use it, and how to keep her workbench clean and organized. An auto mechanic can't tune an engine if he's fumbling to find the right wrench.</p>
+<p>Our workshop is the computer, but not the one you might be used to with icons and a mouse. Our professional workshop is the <strong>server</strong>. And the way we interact with this server, our set of professional tools, is the <strong>Command Line Interface (CLI)</strong>.</p>
+<div class="admonition info">
+<p class="admonition-title">Key Term: The Command Line Interface (CLI)</p>
+<p>The CLI is a text-based interface used for running programs, managing computer files, and interacting with the operating system. It is the direct line of communication to the machine's core.</p>
+</div>
+<p>Think of the graphical interface (windows, icons, your mouse) as a friendly, pre-packaged toolkit for everyday tasks. It's safe and easy. The command line, however, is the master's toolkit. It gives you direct, powerful, and precise control over the machine. It is faster, more versatile, and essential for automating tasks—a key skill for any engineer.</p>
+<p>Your first day on the job isn't about building the final product. It's about getting your keys to the workshop and learning where the tools are.</p>
+<p>So, let's start with a foundational question. Forget computers for a moment.</p>
+<details class="question">
+<summary>Why is it more efficient for a master chef to shout '2-minute egg, sunny-side up!' to their line cook, rather than filling out a detailed paper form with checkboxes for every option?</summary>
+<p>You, the engineer, are the chef. The computer's operating system is your highly-trained line cook. The command line is the language you use to give orders.</p>
+<p>Filling out a form is like using your mouse to click through menus and windows. It's fine for one-off tasks, but imagine trying to serve 100 customers that way. You'd be hopelessly slow. Shouting clear, concise commands is the only way to operate at scale. This is why the command line is the professional's environment.</p>
+<pre class="mermaid"><code>graph LR
+    subgraph "The Professional's Workflow (High Speed, High Scale)"
+        A(&lt;b&gt;Master Chef&lt;/b&gt;&lt;br/&gt;The Engineer) -- Shouts Command --&gt; B(&lt;b&gt;Concise Language&lt;/b&gt;&lt;br/&gt;The Command Line);
+        B -- Interpreted by --&gt; C(&lt;b&gt;Line Cook&lt;/b&gt;&lt;br/&gt;The Operating System);
+        C -- Produces --&gt; D(&lt;b&gt;Perfect Dish&lt;/b&gt;&lt;br/&gt;Precise Action);
+    end
+
+    subgraph "The Amateur's Workflow (Low Speed, Low Scale)"
+        X(Home Cook&lt;br/&gt;The Casual User) -- Fills out Form --&gt; Y(Detailed Recipe Card&lt;br/&gt;Graphical Interface);
+        Y -- Followed by --&gt; C;
+    end
+
+    style A fill:#4CAF50,stroke:#333,stroke-width:2px,color:#fff
+    style B fill:#2196F3,stroke:#333,stroke-width:2px,color:#fff
+    style D fill:#4CAF50,stroke:#333,stroke-width:2px,color:#fff</code></pre>
+</details>
+<p>Our workshop is a <strong>Linux server</strong>. Linux is the dominant operating system for the servers that power the internet, from Google to Netflix to the smallest startups. Mastering its language is non-negotiable. The program you use to type these commands is called the <strong>terminal</strong> or <strong>shell</strong>.</p>
+<p>Let's learn our first three commands. They are the most fundamental. They answer three simple questions:</p>
+<table>
+<thead>
+<tr>
+<th>Question</th>
+<th style="text-align: center;">Command</th>
+<th>Analogy</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Where am I?</strong></td>
+<td style="text-align: center;"><code>pwd</code></td>
+<td>Checking your GPS coordinates.</td>
+</tr>
+<tr>
+<td><strong>What is around me?</strong></td>
+<td style="text-align: center;"><code>ls</code></td>
+<td>Turning on the lights to see inside the room.</td>
+</tr>
+<tr>
+<td><strong>How do I move?</strong></td>
+<td style="text-align: center;"><code>cd</code></td>
+<td>Walking through a door to another room.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="concept-1-where-am-i-pwd">Concept 1: Where am I? (<code>pwd</code>)</h3>
+<p>When you first walk into the workshop, you need to know where you are standing. In a graphical system, you might look at the top of a window to see the folder path, like <code>C:\Users\John\Documents</code>.</p>
+<p>In the command line, we have a direct command for this. It is <code>pwd</code>. <code>pwd</code> stands for <strong>P</strong>rint <strong>W</strong>orking <strong>D</strong>irectory. A "directory" is simply the professional's word for a folder. The "working directory" is the folder you are currently inside.</p>
+<p>Think of it as your GPS. It tells you your exact coordinates inside the computer's file system.</p>
+<p>So, if you just logged into a server and the screen is blank except for a blinking cursor, what is the very first command you should type to orient yourself?</p>
+<div class="language-bash highlight"><span class="filename">Terminal: Checking Your Location</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>$<span class="w"> </span><span class="nb">pwd</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>/home/founding_engineer
+</span></code></pre></div>
+<h3 id="concept-2-what-is-around-me-ls">Concept 2: What is around me? (<code>ls</code>)</h3>
+<p>Now you know where you are. The next logical question is, "What's in this folder?" or "What's in this directory?" The command for this is <code>ls</code>. <code>ls</code> is short for <strong>l</strong>i<strong>s</strong>t. It lists the contents (the files and sub-directories) of your current working directory.</p>
+<p>Imagine you are standing in a room (<code>pwd</code> told you which room). Typing <code>ls</code> is like turning on the lights to see all the furniture and doors in that room.</p>
+<p>Now, a slightly more advanced question. What if you wanted to know more than just the names of the files? What if you wanted to see details, like who owns the file, how big it is, and when it was last modified?</p>
+<p>This is a common need. The command line handles this with <strong>options</strong> or <strong>flags</strong>. An option modifies the behavior of a command. They usually start with a hyphen (<code>-</code>). For <code>ls</code>, a very common option is <code>-l</code> (for "long" format). So, you would type: <code>ls -l</code>. This gives you a detailed, long-form list.</p>
+<p>What do you predict would be the difference in output between typing <code>ls</code> and typing <code>ls -l</code>?</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Simple List (<code>ls</code>)</label><label for="__tabbed_1_2">Detailed List (<code>ls -l</code>)</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>$<span class="w"> </span>ls
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>Desktop<span class="w">  </span>Documents<span class="w">  </span>Downloads<span class="w">  </span>Music<span class="w">  </span>Pictures<span class="w">  </span>Projects<span class="w">  </span>Videos
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>$<span class="w"> </span>ls<span class="w"> </span>-l
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>total<span class="w"> </span><span class="m">28</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>drwxr-xr-x<span class="w"> </span><span class="m">2</span><span class="w"> </span>user<span class="w"> </span>user<span class="w"> </span><span class="m">4096</span><span class="w"> </span>Sep<span class="w"> </span><span class="m">15</span><span class="w"> </span><span class="m">10</span>:00<span class="w"> </span>Desktop
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>drwxr-xr-x<span class="w"> </span><span class="m">2</span><span class="w"> </span>user<span class="w"> </span>user<span class="w"> </span><span class="m">4096</span><span class="w"> </span>Sep<span class="w"> </span><span class="m">15</span><span class="w"> </span><span class="m">10</span>:00<span class="w"> </span>Documents
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>drwxr-xr-x<span class="w"> </span><span class="m">2</span><span class="w"> </span>user<span class="w"> </span>user<span class="w"> </span><span class="m">4096</span><span class="w"> </span>Sep<span class="w"> </span><span class="m">15</span><span class="w"> </span><span class="m">10</span>:00<span class="w"> </span>Downloads
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>drwxr-xr-x<span class="w"> </span><span class="m">2</span><span class="w"> </span>user<span class="w"> </span>user<span class="w"> </span><span class="m">4096</span><span class="w"> </span>Sep<span class="w"> </span><span class="m">15</span><span class="w"> </span><span class="m">10</span>:00<span class="w"> </span>Music
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>drwxr-xr-x<span class="w"> </span><span class="m">2</span><span class="w"> </span>user<span class="w"> </span>user<span class="w"> </span><span class="m">4096</span><span class="w"> </span>Sep<span class="w"> </span><span class="m">15</span><span class="w"> </span><span class="m">10</span>:00<span class="w"> </span>Pictures
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>drwxr-xr-x<span class="w"> </span><span class="m">3</span><span class="w"> </span>user<span class="w"> </span>user<span class="w"> </span><span class="m">4096</span><span class="w"> </span>Sep<span class="w"> </span><span class="m">15</span><span class="w"> </span><span class="m">10</span>:05<span class="w"> </span>Projects
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>drwxr-xr-x<span class="w"> </span><span class="m">2</span><span class="w"> </span>user<span class="w"> </span>user<span class="w"> </span><span class="m">4096</span><span class="w"> </span>Sep<span class="w"> </span><span class="m">15</span><span class="w"> </span><span class="m">10</span>:00<span class="w"> </span>Videos
+</span></code></pre></div>
+</div>
+</div>
+</div>
+<h3 id="concept-3-how-do-i-move-cd">Concept 3: How do I move? (<code>cd</code>)</h3>
+<p>You know where you are (<code>pwd</code>), and you see what's around you (<code>ls</code>). You see a door to another room, a subdirectory that you want to enter. The command to move between directories is <code>cd</code>. <code>cd</code> stands for <strong>c</strong>hange <strong>d</strong>irectory.</p>
+<p>If <code>ls</code> shows you a directory named <code>projects</code>, you would type the following to enter it: <code>cd projects</code>. Your "location" in the terminal would now be inside the <code>projects</code> directory.</p>
+<p>Now, here's a crucial test of understanding. After you run <code>cd projects</code>, your cursor will just blink on a new line. The screen doesn't automatically tell you that you've moved.</p>
+<p>What two commands would you use, and in what order, to first confirm that you have successfully moved into the <code>projects</code> directory, and then to see what's inside it?</p>
+<div class="admonition success">
+<p class="admonition-title">The Engineer's Workflow: Act, Verify, Inspect</p>
+<p>This sequence—Act, Verify, then Inspect—is a fundamental pattern in engineering. You don't assume your command worked. You check. It saves you from countless mistakes.</p>
+<ol>
+<li><strong>Act:</strong> <code>cd projects</code> - You issue the command to move.</li>
+<li><strong>Verify:</strong> <code>pwd</code> - You ask, "Did I actually move? Where am I now?" The system should reply with <code>/home/your_username/projects</code>.</li>
+<li><strong>Inspect:</strong> <code>ls</code> - Now that you've confirmed your new location, you ask, "Okay, what's in here?"</li>
+</ol>
+</div>
+<hr />
+<h3 id="the-full-toolkit-creating-and-manipulating">The Full Toolkit: Creating and Manipulating</h3>
+<p>So far, we've only been looking around. But a workshop is for building. Let's learn the tools for creating and changing things.</p>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Action</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>mkdir [name]</code></td>
+<td><strong>Make Directory</strong></td>
+<td>Creates a new, empty directory.</td>
+</tr>
+<tr>
+<td><code>touch [name]</code></td>
+<td><strong>Create Empty File</strong></td>
+<td>The simplest way to create a new file.</td>
+</tr>
+<tr>
+<td><code>mv [src] [dest]</code></td>
+<td><strong>Move / Rename</strong></td>
+<td>Moves a file to a new directory, or renames it if <code>dest</code> is a new filename.</td>
+</tr>
+<tr>
+<td><code>cp [src] [dest]</code></td>
+<td><strong>Copy</strong></td>
+<td>Copies a file or directory, leaving the original in place.</td>
+</tr>
+<tr>
+<td><code>cat [file]</code></td>
+<td><strong>View Contents</strong></td>
+<td>Displays the entire contents of a file on the screen.</td>
+</tr>
+<tr>
+<td><code>rm [file]</code></td>
+<td><strong>Remove File</strong></td>
+<td>Deletes a file.</td>
+</tr>
+<tr>
+<td><code>chmod [mode] [file]</code></td>
+<td><strong>Change Permissions</strong></td>
+<td>Changes the read/write/execute permissions.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition danger">
+<p class="admonition-title">CRITICAL WARNING: The <code>rm</code> Command is Permanent</p>
+<p>A CRITICAL WARNING: The <code>rm</code> command is permanent. There is no "Recycle Bin" or "Trash Can" on the command line. Once you <code>rm</code> a file, it is gone forever. This is a powerful and dangerous tool. Always double-check what you are doing before using <code>rm</code>.</p>
+</div>
+<hr />
+<hr />
+<h3 id="hands-on-exercise-the-scavenger-hunt">Hands-On Exercise: The Scavenger Hunt</h3>
+<p>Now we apply this to your first exercise, the "Scavenger hunt on a Linux server." The goal is to navigate the file system to find specific information. This simulates a real-world task where a senior engineer might say, "Hey, go find the error log for the web server; I think it's somewhere in the <code>/var/log</code> directory."</p>
+<div class="admonition abstract">
+<p class="admonition-title">Your Mission Briefing</p>
+<p>I am a senior engineer. Here is your task:</p>
+<p>"I've hidden a 'secret message' for you on the server. I believe it's in a file named <code>secret_message.txt</code>. I don't remember exactly where I put it, but I think it's in a directory named <code>deeply_hidden_folder</code>. That folder itself is probably located in a subdirectory called <code>level3</code>, which is inside <code>level2</code>, which is inside <code>level1</code>. The <code>level1</code> directory is in your home directory."</p>
+<p>We know <code>pwd</code>, <code>ls</code>, and <code>cd</code>. You're missing one tool: how to read the contents of a file. The command for that is <code>cat</code>. To read <code>secret_message.txt</code>, you would type: <code>cat secret_message.txt</code></p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Your Task</label><label for="__tabbed_2_2">The Solution (Click to Reveal)</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Based on my instructions and the tools you now have (<code>pwd</code>, <code>ls</code>, <code>cd</code>, <code>cat</code>), walk me through the exact sequence of commands you would type, step-by-step, to find and read the secret message. Start from the moment you log in to your home directory.</p>
+<p><em>Think through the "Act, Verify, Inspect" pattern before revealing the solution.</em></p>
+</div>
+<div class="tabbed-block">
+<div class="language-bash highlight"><span class="filename">Solution Walkthrough</span><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1"># Step 1: Verify your starting point. Always know where you are.</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="nb">pwd</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="c1"># Step 2: Inspect your surroundings. You should see &#39;level1&#39;.</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>ls
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="c1"># Step 3: Act. Move directly to the target directory.</span>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="c1"># Pro-tip: Use the Tab key to auto-complete each part of this path!</span>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="nb">cd</span><span class="w"> </span>level1/level2/level3/deeply_hidden_folder/
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="c1"># Step 4: Verify the move.</span>
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="nb">pwd</span>
+</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>
+</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a><span class="c1"># Step 5: Inspect the new location. Is the file here?</span>
+</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>ls
+</span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>
+</span><span id="__span-3-17"><a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a><span class="c1"># Step 6: Act. You&#39;ve found the file. Read its contents.</span>
+</span><span id="__span-3-18"><a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a>cat<span class="w"> </span>secret_message.txt
+</span></code></pre></div>
+</div>
+</div>
+</div>
+<hr />
+<p><br></p>
+<p>Ready to learn how we manage our code's source of truth?</p>
+<p><a class="md-button md-button--primary md-button--large" href="../lesson0.2_blueprint/">Proceed to Lesson 0.2: Designing Technical Architecture</a></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../.." class="md-footer__link md-footer__link--prev" aria-label="Previous: Home">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Home
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../lesson0.2_blueprint/" class="md-footer__link md-footer__link--next" aria-label="Next: Lesson 0.2: Designing Technical Architecture">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Lesson 0.2: Designing Technical Architecture
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "search.suggest", "search.highlight", "content.code.annotate", "content.tabs.link", "navigation.footer"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.56ea9cef.min.js"></script>
+      
+    
+  </body>
+</html>
