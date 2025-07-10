@@ -711,15 +711,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#hands-on-exercise-the-scavenger-hunt" class="md-nav__link">
-    <span class="md-ellipsis">
-      Hands-On Exercise: The Scavenger Hunt
-    </span>
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -2419,6 +2410,150 @@
 <p>A CRITICAL WARNING: The <code>rm</code> command is permanent. There is no "Recycle Bin" or "Trash Can" on the command line. Once you <code>rm</code> a file, it is gone forever. This is a powerful and dangerous tool. Always double-check what you are doing before using <code>rm</code>.</p>
 </div>
 <hr />
+<h1 id="command-line-basics-your-guide-to-the-digital-filing-cabinet">Command Line Basics: Your Guide to The Digital Filing Cabinet</h1>
+<p>Let's demystify the command line. The best way to start is to think of your computer's storage as a giant filing cabinet.</p>
+<ul>
+<li><strong>Directories</strong> are the big drawers. You create them to stay organized.</li>
+<li><strong>Files</strong> are the paper documents you put inside those drawers.</li>
+</ul>
+<p>Our job today is to learn the five basic commands to manage this cabinet. Let's begin.</p>
+<hr />
+<h2 id="step-1-creating-a-drawer-mkdir">Step 1: Creating a Drawer (<code>mkdir</code>)</h2>
+<p>Before we can put any files away, we need a drawer to put them in. In the command line world, a drawer or a folder is called a <strong>directory</strong>. The command to <strong>M</strong>a<strong>k</strong>e a <strong>Dir</strong>ectory is <code>mkdir</code>.</p>
+<p><strong>The Formula:</strong> <code>mkdir [name_of_directory]</code></p>
+<h3 id="lets-do-it-together">Let's Do It Together:</h3>
+<ol>
+<li>
+<p>First, let's see what's on our "desktop" right now. Use the <code>ls</code> (list) command.
+    <div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>ls
+</span></code></pre></div>
+    <em>(You'll see your current files and folders.)</em></p>
+</li>
+<li>
+<p>Now, let's make our very first project directory. We'll call it <code>science-project</code>. Type this exactly and press Enter:
+    <div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>mkdir<span class="w"> </span>science-project
+</span></code></pre></div>
+    It looks like nothing happened, right? The command line only talks back when there's an error or when you ask it to. So, how do we check our work? We use <code>ls</code> again!
+    <div class="language-bash highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>ls
+</span></code></pre></div>
+    <strong>Success!</strong> You should now see <code>science-project</code> listed among your other items. You've just created your first digital drawer.</p>
+</li>
+</ol>
+<hr />
+<h2 id="step-2-creating-a-blank-document-touch">Step 2: Creating a Blank Document (<code>touch</code>)</h2>
+<p>Okay, we have our <code>science-project</code> drawer. Now we need to put a blank piece of paper in it to start taking notes. The <code>touch</code> command creates a new, completely empty file. It's like "touching" a piece of paper into existence.</p>
+<p><strong>The Formula:</strong> <code>touch [name_of_file]</code></p>
+<h3 id="lets-do-it-together_1">Let's Do It Together:</h3>
+<ol>
+<li>
+<p>Right now, we are standing outside our <code>science-project</code> drawer. To put a file <em>inside</em> it, we first have to "open the drawer." We do this by changing our location into the directory with the <code>cd</code> command.
+    <div class="language-bash highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nb">cd</span><span class="w"> </span>science-project
+</span></code></pre></div>
+    <em>(Your command prompt might change to show you are now inside <code>science-project</code>.)</em></p>
+</li>
+<li>
+<p>Now that we're inside, let's create a file for our hypothesis.
+    <div class="language-bash highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>touch<span class="w"> </span>hypothesis.txt
+</span></code></pre></div></p>
+</li>
+<li>
+<p>Let's check our work. Use <code>ls</code> to see what's inside this new directory.
+    <div class="language-bash highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>ls
+</span></code></pre></div>
+    <strong>Perfect!</strong> You will see <code>hypothesis.txt</code> listed. You've just placed your first file in a directory.</p>
+</li>
+</ol>
+<hr />
+<h2 id="step-3-peeking-inside-a-document-cat">Step 3: Peeking Inside a Document (<code>cat</code>)</h2>
+<p>An empty file is a good start, but what if we want to quickly see what's written inside without opening a full text editor? The <code>cat</code> command displays the entire contents of a file right on your screen.</p>
+<p><strong>The Formula:</strong> <code>cat [name_of_file]</code></p>
+<h3 id="lets-do-it-together_2">Let's Do It Together:</h3>
+<ol>
+<li>
+<p>First, our <code>hypothesis.txt</code> file is empty. That's boring. Let's use a little trick to put some text in it. Just type this command (we'll learn <em>why</em> it works later):
+    <div class="language-bash highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;If I learn the command line, I will be more efficient.&quot;</span><span class="w"> </span>&gt;<span class="w"> </span>hypothesis.txt
+</span></code></pre></div></p>
+</li>
+<li>
+<p>Now, let's use <code>cat</code> to read the file.
+    <div class="language-bash highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>cat<span class="w"> </span>hypothesis.txt
+</span></code></pre></div>
+    Look at that! The terminal will print the contents of the file right below your command:
+    <div class="language-text highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>If I learn the command line, I will be more efficient.
+</span></code></pre></div>
+    This is incredibly useful for quickly checking files.</p>
+</li>
+</ol>
+<hr />
+<h2 id="step-4-moving-and-renaming-mv">Step 4: Moving and Renaming (<code>mv</code>)</h2>
+<p>Organization is key. Sometimes you name a file poorly, or you need to move a file from one drawer to another. The <code>mv</code> (<strong>m</strong>o<strong>v</strong>e) command does both!</p>
+<p><strong>The Formula:</strong> <code>mv [what_to_move] [where_to_put_it]</code></p>
+<h3 id="lets-do-it-together-part-a-renaming">Let's Do It Together (Part A: Renaming):</h3>
+<p>"hypothesis.txt" is a bit long. Let's rename it to <code>plan.txt</code>. Since we are moving it from an old name to a new name <em>in the same location</em>, it just renames the file.</p>
+<p><div class="language-bash highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>mv<span class="w"> </span>hypothesis.txt<span class="w"> </span>plan.txt
+</span></code></pre></div>
+Check your work with <code>ls</code>. You'll see <code>hypothesis.txt</code> is gone, and <code>plan.txt</code> is now there.</p>
+<h3 id="lets-do-it-together-part-b-moving">Let's Do It Together (Part B: Moving):</h3>
+<p>Let's get even more organized. We'll create a <code>docs</code> folder and move our <code>plan.txt</code> into it.</p>
+<ol>
+<li>
+<p>First, create a new directory for our documents.
+    <div class="language-bash highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>mkdir<span class="w"> </span>docs
+</span></code></pre></div></p>
+</li>
+<li>
+<p>Now, use <code>mv</code> to move the file <code>plan.txt</code> into the <code>docs</code> directory.
+    <div class="language-bash highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>mv<span class="w"> </span>plan.txt<span class="w"> </span>docs
+</span></code></pre></div>
+Check with <code>ls</code>. The <code>plan.txt</code> file is gone from here. Where did it go? Let's look inside the <code>docs</code> directory: <code>ls docs</code>. There it is!</p>
+</li>
+</ol>
+<hr />
+<h2 id="step-5-the-shredder-rm">Step 5: The Shredder (<code>rm</code>)</h2>
+<p><strong>ATTENTION!</strong> This is the most important command to be careful with. <code>rm</code> means <strong>ReMove</strong>. It deletes files.</p>
+<blockquote>
+<p><strong>WARNING:</strong> This is NOT like moving a file to the Trash or Recycle Bin. When you use <code>rm</code>, the file is <strong>PERMANENTLY GONE</strong>. There is no undo button. Think of it as a paper shredder. Always pause and think before you press Enter on an <code>rm</code> command.</p>
+</blockquote>
+<p><strong>The Formula:</strong> <code>rm [name_of_file_to_delete]</code></p>
+<h3 id="lets-do-it-together-safely">Let's Do It Together (Safely):</h3>
+<ol>
+<li>Let's create a junk file that we don't mind deleting.
+    <div class="language-bash highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>touch<span class="w"> </span>junk-file.tmp
+</span></code></pre></div></li>
+<li>Use <code>ls</code> to confirm <code>junk-file.tmp</code> is there.</li>
+<li>Now, let's carefully delete it.
+    <div class="language-bash highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>rm<span class="w"> </span>junk-file.tmp
+</span></code></pre></div></li>
+<li>Use <code>ls</code> again. It's gone forever.</li>
+</ol>
+<h3 id="what-about-deleting-a-directory">What about deleting a directory?</h3>
+<p>If you try <code>rm docs</code>, it will give you an error. This is a safety feature! To delete a directory and <strong>EVERYTHING</strong> inside it, you must use the <code>-r</code> (recursive) flag.</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="c1"># THIS IS A DANGEROUS COMMAND!</span>
+</span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a><span class="c1"># It will delete the &#39;docs&#39; folder and &#39;plan.txt&#39; inside it.</span>
+</span><span id="__span-17-3"><a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a>rm<span class="w"> </span>-r<span class="w"> </span>docs
+</span></code></pre></div>
+<hr />
+<h2 id="lesson-summary-homework">Lesson Summary &amp; Homework</h2>
+<p>Excellent work today! You've just learned a complete workflow for managing files.</p>
+<ul>
+<li><code>mkdir</code>: Creates directories (drawers).</li>
+<li><code>touch</code>: Creates empty files (paper).</li>
+<li><code>cat</code>: Reads a file's contents.</li>
+<li><code>mv</code>: Renames or moves files/directories.</li>
+<li><code>rm</code>: <strong>Permanently</strong> deletes files.</li>
+</ul>
+<h3 id="your-homework">Your Homework:</h3>
+<p>Practice is how this becomes second nature. Your assignment is to:</p>
+<ol>
+<li>Go back to your home directory (<code>cd ..</code>).</li>
+<li>Create a new directory called <code>my-homework</code>.</li>
+<li>Go inside <code>my-homework</code>.</li>
+<li>Create two directories inside it: <code>math</code> and <code>history</code>.</li>
+<li>Create a file named <code>algebra.txt</code> inside the <code>math</code> directory.</li>
+<li>Create a file named <code>notes.txt</code> inside the <code>history</code> directory.</li>
+<li>Rename the <code>notes.txt</code> file to <code>ww2-notes.txt</code>.</li>
+<li>When you're all done, clean up by deleting the entire <code>my-homework</code> directory and everything in it. (Remember the special flag for deleting directories!)</li>
+</ol>
 <hr />
 <h3 id="hands-on-exercise-the-scavenger-hunt">Hands-On Exercise: The Scavenger Hunt</h3>
 <p>Now we apply this to your first exercise, the "Scavenger hunt on a Linux server." The goal is to navigate the file system to find specific information. This simulates a real-world task where a senior engineer might say, "Hey, go find the error log for the web server; I think it's somewhere in the <code>/var/log</code> directory."</p>
@@ -2435,24 +2570,24 @@
 <p><em>Think through the "Act, Verify, Inspect" pattern before revealing the solution.</em></p>
 </div>
 <div class="tabbed-block">
-<div class="language-bash highlight"><span class="filename">Solution Walkthrough</span><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1"># Step 1: Verify your starting point. Always know where you are.</span>
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="nb">pwd</span>
-</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>
-</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="c1"># Step 2: Inspect your surroundings. You should see &#39;level1&#39;.</span>
-</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>ls
-</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>
-</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="c1"># Step 3: Act. Move directly to the target directory.</span>
-</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="c1"># Pro-tip: Use the Tab key to auto-complete each part of this path!</span>
-</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="nb">cd</span><span class="w"> </span>level1/level2/level3/deeply_hidden_folder/
-</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>
-</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="c1"># Step 4: Verify the move.</span>
-</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="nb">pwd</span>
-</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>
-</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a><span class="c1"># Step 5: Inspect the new location. Is the file here?</span>
-</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>ls
-</span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>
-</span><span id="__span-3-17"><a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a><span class="c1"># Step 6: Act. You&#39;ve found the file. Read its contents.</span>
-</span><span id="__span-3-18"><a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a>cat<span class="w"> </span>secret_message.txt
+<div class="language-bash highlight"><span class="filename">Solution Walkthrough</span><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="c1"># Step 1: Verify your starting point. Always know where you are.</span>
+</span><span id="__span-18-2"><a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a><span class="nb">pwd</span>
+</span><span id="__span-18-3"><a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a>
+</span><span id="__span-18-4"><a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a><span class="c1"># Step 2: Inspect your surroundings. You should see &#39;level1&#39;.</span>
+</span><span id="__span-18-5"><a id="__codelineno-18-5" name="__codelineno-18-5" href="#__codelineno-18-5"></a>ls
+</span><span id="__span-18-6"><a id="__codelineno-18-6" name="__codelineno-18-6" href="#__codelineno-18-6"></a>
+</span><span id="__span-18-7"><a id="__codelineno-18-7" name="__codelineno-18-7" href="#__codelineno-18-7"></a><span class="c1"># Step 3: Act. Move directly to the target directory.</span>
+</span><span id="__span-18-8"><a id="__codelineno-18-8" name="__codelineno-18-8" href="#__codelineno-18-8"></a><span class="c1"># Pro-tip: Use the Tab key to auto-complete each part of this path!</span>
+</span><span id="__span-18-9"><a id="__codelineno-18-9" name="__codelineno-18-9" href="#__codelineno-18-9"></a><span class="nb">cd</span><span class="w"> </span>level1/level2/level3/deeply_hidden_folder/
+</span><span id="__span-18-10"><a id="__codelineno-18-10" name="__codelineno-18-10" href="#__codelineno-18-10"></a>
+</span><span id="__span-18-11"><a id="__codelineno-18-11" name="__codelineno-18-11" href="#__codelineno-18-11"></a><span class="c1"># Step 4: Verify the move.</span>
+</span><span id="__span-18-12"><a id="__codelineno-18-12" name="__codelineno-18-12" href="#__codelineno-18-12"></a><span class="nb">pwd</span>
+</span><span id="__span-18-13"><a id="__codelineno-18-13" name="__codelineno-18-13" href="#__codelineno-18-13"></a>
+</span><span id="__span-18-14"><a id="__codelineno-18-14" name="__codelineno-18-14" href="#__codelineno-18-14"></a><span class="c1"># Step 5: Inspect the new location. Is the file here?</span>
+</span><span id="__span-18-15"><a id="__codelineno-18-15" name="__codelineno-18-15" href="#__codelineno-18-15"></a>ls
+</span><span id="__span-18-16"><a id="__codelineno-18-16" name="__codelineno-18-16" href="#__codelineno-18-16"></a>
+</span><span id="__span-18-17"><a id="__codelineno-18-17" name="__codelineno-18-17" href="#__codelineno-18-17"></a><span class="c1"># Step 6: Act. You&#39;ve found the file. Read its contents.</span>
+</span><span id="__span-18-18"><a id="__codelineno-18-18" name="__codelineno-18-18" href="#__codelineno-18-18"></a>cat<span class="w"> </span>secret_message.txt
 </span></code></pre></div>
 </div>
 </div>
