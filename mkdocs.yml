@@ -4,7 +4,6 @@ site_name: Kenya School of Artificial Intelligence
 site_url: https://github.com/alexmwirigi-DataScience/ksai-syllabus.git
 site_author: Alex Mwirigi
 repo_name: ksai-syllabus  
-edit_uri: edit/main/docs/
 
 theme:
   name: material
@@ -37,8 +36,6 @@ theme:
   - search.highlight
   - content.code.annotate
   - content.tabs.link
-  - content.action.edit
-  - content.action.view
 
 # --- Extensions ---
 markdown_extensions:
