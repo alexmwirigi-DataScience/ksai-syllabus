@@ -135,7 +135,182 @@ So far, we've only been looking around. But a workshop is for building. Let's le
     A CRITICAL WARNING: The `rm` command is permanent. There is no "Recycle Bin" or "Trash Can" on the command line. Once you `rm` a file, it is gone forever. This is a powerful and dangerous tool. Always double-check what you are doing before using `rm`.
 
 ---
+# Command Line Basics: Your Guide to The Digital Filing Cabinet
 
+Let's demystify the command line. The best way to start is to think of your computer's storage as a giant filing cabinet.
+
+*   **Directories** are the big drawers. You create them to stay organized.
+*   **Files** are the paper documents you put inside those drawers.
+
+Our job today is to learn the five basic commands to manage this cabinet. Let's begin.
+
+---
+
+## Step 1: Creating a Drawer (`mkdir`)
+
+Before we can put any files away, we need a drawer to put them in. In the command line world, a drawer or a folder is called a **directory**. The command to **M**a**k**e a **Dir**ectory is `mkdir`.
+
+**The Formula:** `mkdir [name_of_directory]`
+
+### Let's Do It Together:
+
+1.  First, let's see what's on our "desktop" right now. Use the `ls` (list) command.
+    ```bash
+    ls
+    ```
+    *(You'll see your current files and folders.)*
+
+2.  Now, let's make our very first project directory. We'll call it `science-project`. Type this exactly and press Enter:
+    ```bash
+    mkdir science-project
+    ```
+    It looks like nothing happened, right? The command line only talks back when there's an error or when you ask it to. So, how do we check our work? We use `ls` again!
+    ```bash
+    ls
+    ```
+    **Success!** You should now see `science-project` listed among your other items. You've just created your first digital drawer.
+
+---
+
+## Step 2: Creating a Blank Document (`touch`)
+
+Okay, we have our `science-project` drawer. Now we need to put a blank piece of paper in it to start taking notes. The `touch` command creates a new, completely empty file. It's like "touching" a piece of paper into existence.
+
+**The Formula:** `touch [name_of_file]`
+
+### Let's Do It Together:
+
+1.  Right now, we are standing outside our `science-project` drawer. To put a file *inside* it, we first have to "open the drawer." We do this by changing our location into the directory with the `cd` command.
+    ```bash
+    cd science-project
+    ```
+    *(Your command prompt might change to show you are now inside `science-project`.)*
+
+2.  Now that we're inside, let's create a file for our hypothesis.
+    ```bash
+    touch hypothesis.txt
+    ```
+
+3.  Let's check our work. Use `ls` to see what's inside this new directory.
+    ```bash
+    ls
+    ```
+    **Perfect!** You will see `hypothesis.txt` listed. You've just placed your first file in a directory.
+
+---
+
+## Step 3: Peeking Inside a Document (`cat`)
+
+An empty file is a good start, but what if we want to quickly see what's written inside without opening a full text editor? The `cat` command displays the entire contents of a file right on your screen.
+
+**The Formula:** `cat [name_of_file]`
+
+### Let's Do It Together:
+
+1.  First, our `hypothesis.txt` file is empty. That's boring. Let's use a little trick to put some text in it. Just type this command (we'll learn *why* it works later):
+    ```bash
+    echo "If I learn the command line, I will be more efficient." > hypothesis.txt
+    ```
+
+2.  Now, let's use `cat` to read the file.
+    ```bash
+    cat hypothesis.txt
+    ```
+    Look at that! The terminal will print the contents of the file right below your command:
+    ```
+    If I learn the command line, I will be more efficient.
+    ```
+    This is incredibly useful for quickly checking files.
+
+---
+
+## Step 4: Moving and Renaming (`mv`)
+
+Organization is key. Sometimes you name a file poorly, or you need to move a file from one drawer to another. The `mv` (**m**o**v**e) command does both!
+
+**The Formula:** `mv [what_to_move] [where_to_put_it]`
+
+### Let's Do It Together (Part A: Renaming):
+
+"hypothesis.txt" is a bit long. Let's rename it to `plan.txt`. Since we are moving it from an old name to a new name *in the same location*, it just renames the file.
+
+```bash
+mv hypothesis.txt plan.txt
+```
+Check your work with `ls`. You'll see `hypothesis.txt` is gone, and `plan.txt` is now there.
+
+### Let's Do It Together (Part B: Moving):
+
+Let's get even more organized. We'll create a `docs` folder and move our `plan.txt` into it.
+
+1.  First, create a new directory for our documents.
+    ```bash
+    mkdir docs
+    ```
+
+2.  Now, use `mv` to move the file `plan.txt` into the `docs` directory.
+    ```bash
+    mv plan.txt docs
+    ```
+Check with `ls`. The `plan.txt` file is gone from here. Where did it go? Let's look inside the `docs` directory: `ls docs`. There it is!
+
+---
+
+## Step 5: The Shredder (`rm`)
+
+**ATTENTION!** This is the most important command to be careful with. `rm` means **ReMove**. It deletes files.
+
+> **WARNING:** This is NOT like moving a file to the Trash or Recycle Bin. When you use `rm`, the file is **PERMANENTLY GONE**. There is no undo button. Think of it as a paper shredder. Always pause and think before you press Enter on an `rm` command.
+
+**The Formula:** `rm [name_of_file_to_delete]`
+
+### Let's Do It Together (Safely):
+
+1.  Let's create a junk file that we don't mind deleting.
+    ```bash
+    touch junk-file.tmp
+    ```
+2.  Use `ls` to confirm `junk-file.tmp` is there.
+3.  Now, let's carefully delete it.
+    ```bash
+    rm junk-file.tmp
+    ```
+4.  Use `ls` again. It's gone forever.
+
+### What about deleting a directory?
+
+If you try `rm docs`, it will give you an error. This is a safety feature! To delete a directory and **EVERYTHING** inside it, you must use the `-r` (recursive) flag.
+
+```bash
+# THIS IS A DANGEROUS COMMAND!
+# It will delete the 'docs' folder and 'plan.txt' inside it.
+rm -r docs
+```
+
+---
+
+## Lesson Summary & Homework
+
+Excellent work today! You've just learned a complete workflow for managing files.
+
+*   `mkdir`: Creates directories (drawers).
+*   `touch`: Creates empty files (paper).
+*   `cat`: Reads a file's contents.
+*   `mv`: Renames or moves files/directories.
+*   `rm`: **Permanently** deletes files.
+
+### Your Homework:
+
+Practice is how this becomes second nature. Your assignment is to:
+
+1.  Go back to your home directory (`cd ..`).
+2.  Create a new directory called `my-homework`.
+3.  Go inside `my-homework`.
+4.  Create two directories inside it: `math` and `history`.
+5.  Create a file named `algebra.txt` inside the `math` directory.
+6.  Create a file named `notes.txt` inside the `history` directory.
+7.  Rename the `notes.txt` file to `ww2-notes.txt`.
+8.  When you're all done, clean up by deleting the entire `my-homework` directory and everything in it. (Remember the special flag for deleting directories!)
 ---
 
 ### Hands-On Exercise: The Scavenger Hunt
